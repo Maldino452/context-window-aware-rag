@@ -1,0 +1,47 @@
+# Accommodation Policy - Aurelius Consulting Group
+
+## Nightly Rate Limits
+Maximum rates (excluding taxes):
+
+Domestic:
+- Tier 1 cities (major metros): $250/night
+- Tier 2 cities (regional): $180/night  
+- Tier 3 cities (small markets): $150/night
+
+International:
+- Europe major cities: €200/night
+- Europe other: €150/night
+- Asia major cities: $220/night
+- Asia other: $160/night
+
+## Rate Exceptions
+Rates above limits require manager approval with:
+- No available hotels within limit, OR
+- Conference block rate, OR
+- Safety considerations
+
+## Hotel Selection
+Choose hotels that:
+- Are within 30 minutes of client site
+- Offer business amenities (WiFi, workspace)
+- Meet safety standards
+- Provide breakfast when available
+
+## Room Type
+Standard single occupancy only. Suites not reimbursable unless:
+- Standard rooms unavailable
+- Extended stay over 7 nights
+
+## Reimbursable Amenities
+- Standard WiFi
+- Business center
+- Hotel breakfast (if not included)
+- Reasonable parking
+
+## NOT Reimbursable
+- In-room movies
+- Minibar charges
+- Spa or gym fees
+- Room service (except late arrival)
+- Late checkout fees
+- Laundry (unless trip over 5 days)

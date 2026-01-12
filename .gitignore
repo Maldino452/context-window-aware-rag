@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+
+# OS files
+.DS_Store
+
+# Vector database (rebuildable)
+chroma_db/
+
+# Streamlit
+.streamlit/
+
+# Editor
+.vscode/

@@ -1,0 +1,30 @@
+# Receipt Policy - Aurelius Consulting Group
+
+## When Receipts Are Mandatory
+ALWAYS required for:
+- Any expense over $25
+- All accommodation
+- All flights
+- Rental cars
+- Client entertainment (any amount)
+- Alcohol (any amount)
+
+## When Optional
+- Public transport under $25
+- Parking under $10
+- Tips under $20
+- Meals under $25 (within per diem)
+
+## Valid Receipts Must Include
+- Vendor name and location
+- Date of transaction
+- Itemized list
+- Total amount
+- Payment method
+
+## Lost Receipt Protocol
+- Submit with explanation
+- Provide credit card statement
+- Maximum $75 per lost receipt
+- Maximum 3 lost receipts per quarter
+- Manager approval required

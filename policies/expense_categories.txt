@@ -1,0 +1,39 @@
+# Expense Categories and Codes - Aurelius Consulting Group
+
+## Primary Categories
+
+### Transportation
+- AIR: Airfare
+- RAIL: Train tickets
+- RIDE: Ride-hailing (Uber, Lyft, taxi)
+- PUBLIC: Public transportation
+- RENTAL: Car rental
+- PARKING: Parking fees
+- MILEAGE: Personal vehicle
+
+### Accommodation
+- HOTEL: Hotel charges
+- LODGING: Alternative accommodation
+
+### Meals
+- BREAKFAST: Morning meals
+- LUNCH: Midday meals
+- DINNER: Evening meals
+- ENTERTAIN: Client entertainment
+
+### Other
+- BAGGAGE: Luggage fees
+- VISA: Visa and passport
+- COMM: Communication (phone, data)
+- MISC: Other business expenses
+
+## Expense Limits Quick Reference
+
+Domestic meals per day: $80
+International meals: $65-90/day
+Taxi tips: Up to 20%
+Lost receipt max: $75
+Hotel domestic Tier 1: $250/night
+Checked bag: 3+ day trips only
+Flight economy: Under 6 hours
+Manager approval: Exceptions under $500

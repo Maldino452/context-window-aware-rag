@@ -1,0 +1,34 @@
+# Flight Policy - Aurelius Consulting Group
+
+Flights may be claimed for approved business travel.
+
+## Allowed Classes
+- Economy class for flights under 6 hours (mandatory)
+- Premium economy for flights 6-10 hours  
+- Business class for flights over 10 hours (requires director approval)
+
+## Booking Requirements
+- Flights should be booked at least 7 days in advance
+- Urgent travel exceptions allowed with documentation
+- Use TravelHub portal unless vendor unavailable
+
+## Route Selection
+Select most direct route available. Indirect routes requiring justification if more than 2 hours longer.
+
+## Seat Selection
+- Standard seat selection reimbursable
+- Extra legroom reimbursable for flights over 4 hours
+- Paid upgrades at check-in not reimbursable
+- Loyalty redemptions are personal benefit (non-reimbursable)
+
+## Baggage
+See separate luggage policy document.
+
+## Flight Changes
+Change fees reimbursable if:
+- Client meeting rescheduled
+- Business needs changed
+- Weather or airline issues
+- Medical emergency (documentation required)
+
+Personal reasons for changes are not reimbursable.

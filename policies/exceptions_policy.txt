@@ -1,0 +1,29 @@
+# Exceptions and Approvals - Aurelius Consulting Group
+
+Exceptions to standard policies may be granted under exceptional circumstances.
+
+## All Exceptions Require
+- Written manager approval (BEFORE incurring expense)
+- Submission of detailed justification
+- Estimate of additional cost
+
+## Approval Levels
+- Up to $500 over policy: Manager approval
+- $500-$2000 over policy: Director approval  
+- Over $2000: VP approval required
+
+## Common Exception Scenarios
+- Conference hotels exceeding rate limits
+- Medical conditions requiring upgraded seats
+- High cost-of-living cities
+- Last-minute urgent travel
+- Group travel with client executives
+
+## Without Approval
+Expenses outside policy will be rejected.
+
+## Retroactive Requests
+Exceptions requested AFTER expense incurred:
+- Less likely to be approved
+- Require extraordinary justification
+- VP approval required regardless of amount

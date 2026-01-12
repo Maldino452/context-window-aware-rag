@@ -1,0 +1,39 @@
+# Reimbursement Process - Aurelius Consulting Group
+
+## Timeline
+Submit within 30 days of trip completion.
+
+Late submissions (30-60 days):
+- Require manager approval
+- Subject to review
+
+Over 60 days:
+- Will not be reimbursed
+- Rare exceptions with VP approval
+
+## Submission Steps
+1. Gather all receipts and approvals
+2. Log into ExpenseHub portal
+3. Select "New Expense Report"  
+4. Enter trip details and expenses
+5. Upload receipts
+6. Submit to manager
+
+## Approval Workflow
+1. Manager review (1-2 days)
+2. Finance review (1-2 days)
+3. Payment processing (3-5 days)
+
+Total: 7-10 business days
+
+## Payment Methods
+- Direct deposit (standard)
+- PayPal (if on file)
+- Check (10-15 days)
+
+## Rejection Reasons
+- Missing receipts
+- Outside policy without approval
+- Personal expenses
+- Insufficient justification
+- Duplicates

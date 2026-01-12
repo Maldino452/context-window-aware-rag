@@ -1,0 +1,49 @@
+# Ground Transport Policy - Aurelius Consulting Group
+
+Employees may claim ground transport during business travel.
+
+## Allowed Transport Methods
+
+### Ride-Hailing Services
+- Standard service only (UberX, Lyft Standard)
+- Premium services require justification:
+  * Groups of 4+ employees
+  * Excessive luggage
+  * Standard service unavailable
+
+### Taxis  
+- Allowed when ride-hailing unavailable
+- Must provide itemized receipt with date, locations, fare
+- Tips up to 20% reimbursable
+
+### Public Transportation
+- Always preferred when practical
+- All public transport reimbursable: trains, metros, buses
+- No receipt required for trips under $25
+- Weekly/monthly passes reimbursable with receipt
+
+### Rental Cars
+Require manager pre-approval. Only authorized when:
+- Multiple meetings at different locations same day
+- Public transport unavailable
+- Group of 3+ employees
+
+Guidelines:
+- Compact or mid-size vehicles only
+- Full insurance coverage mandatory
+- Fuel receipts required
+- Return with full tank
+- Parking and toll receipts required
+
+### Personal Vehicle
+- Reimbursed at $0.58 per mile
+- Must log: date, destination, purpose, odometer readings
+- NOT for regular office commute
+- Parking and tolls reimbursable with receipts
+
+## Non-Reimbursable
+- Luxury vehicles without justification
+- Personal use during business trips
+- Traffic fines, parking tickets
+- Vehicle damage
+- Personal errands
