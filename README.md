@@ -168,6 +168,26 @@ This example demonstrates how the system assembles context under fixed budgets a
 
 > **“Can I expense Uber rides during business travel?”**
 
+### RAG System Answer
+
+>Based on the provided policy documents, it appears that Uber rides are not allowed for business travel. According to [Source 1: ground_transport_policy.txt], ride-hailing >services like UberX are only allowed for standard service, which is not suitable for business travel.
+
+>Additionally, [Source 2: travel_policy.txt] states that all employees may claim expenses for approved business travel, but does not specify what qualifies as business travel. >However, it mentions that pre-approval requirements must be met before booking.
+
+>[Source 3: regional_africa.txt] provides guidance on ground transportation options in Africa, including taxi and ride-hailing services. It also notes that private drivers may >be recommended for multi-day trips, but requires negotiation of the day rate.
+
+>The [Source 4: ground_transport_policy.txt] document specifically states that public transport is preferred when practical, and all public transport reimbursable (trains, >metros, buses) with a receipt. Additionally, it mentions that rental cars require manager pre-approval for certain situations, such as multiple meetings at different locations >same day.
+
+>[Source 6: ground_transport_policy.txt] also lists non-reimbursable expenses, including luxury vehicles without justification, personal use during business trips, traffic >fines, parking tickets, and vehicle damage.
+
+### Context Budget Breakdown
+|                | Instructions | Goal | Memory | Retrieval | Tool Outputs |
+|----------------|--------------|------|--------|-----------|--------------|
+| **Tokens**     | 95 / 255     | 12 / 1500 | 5 / 55 | 478 / 550 | 5 / 855 |
+| **Status**     | 37%          | 1%   | 9%     | ⚠ TRUNCATED | 1% |
+| **Source**     | System prompt | User input + conversation history | Conversation memory store | Vector database retrieval | Tool execution history |
+
+
 Although this is a simple question, the vector retriever surfaces multiple relevant policy sections related to:
 - Ground transportation
 - Ride-sharing services
@@ -204,14 +224,6 @@ This behavior is expected and intentional.
 | Tool Outputs   | 855    | Preserved |
 
 A truncation warning is surfaced to the user via the token breakdown UI.
-
----
-
-### Final Answer (Excerpt)
-
-The model correctly answers that Uber rides are reimbursable when used for legitimate business travel, subject to receipt and approval requirements, citing the relevant policy sections.
-
-Despite retrieval truncation, the most relevant information survives, and answer quality is not degraded.
 
 ---
 
