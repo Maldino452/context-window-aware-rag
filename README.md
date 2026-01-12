@@ -22,7 +22,10 @@ The primary goal of this project is not to maximize recall, but to demonstrate:
 - Deliberate retrieval truncation
 - Transparent and observable context assembly
 
-The system includes both a **CLI interface** and a **minimal Streamlit web UI**, making it easy to inspect retrieval behavior, token usage, and budget overflows during execution.
+
+The system includes both a CLI interface and a **minimal Streamlit web UI**, making it easy to inspect retrieval behavior, token usage, and budget overflows during execution.  
+**The Streamlit UI is the primary demonstration interface used for evaluation.**
+
 
 
 ## Architecture
