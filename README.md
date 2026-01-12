@@ -164,7 +164,7 @@ By separating these concerns and budgeting them independently, the system avoids
 
 This example demonstrates how the system assembles context under fixed budgets and handles retrieval overflow.
 
-### User Question (Simple)
+### User Question
 
 > **“Can I expense Uber rides during business travel?”**
 
