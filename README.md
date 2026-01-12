@@ -374,3 +374,12 @@ The screenshots below demonstrate the system's behavior under different levels o
 
 ### Complex Query (High Retrieval Pressure)
 ![Complex Query Screenshot](screenshots/complex_question.png)
+
+
+## Data Disclaimer
+
+The policy documents used in this project are **synthetic and non-proprietary**.  
+They were generated specifically for the purpose of demonstrating context-window
+management, retrieval behaviour, and truncation under constrained budgets.
+
+No real, confidential, or scraped policy data is included in this repository.
