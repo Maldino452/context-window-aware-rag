@@ -31,92 +31,6 @@ The system follows a standard RAG pipeline, with an explicit **context assembly 
 
 ### High-Level System Flow
 
-```text
-User (CLI / Streamlit)
-        |
-        v
-┌────────────────────────┐
-│ User Question          │
-└───────────┬────────────┘
-            v
-┌────────────────────────┐
-│ Vector Retrieval       │
-│ Chroma + Embeddings    │
-│ (Top-k semantic chunks)│
-└───────────┬────────────┘
-            v
-┌────────────────────────────────────┐
-│ Context Assembly Engine             │
-│                                    │
-│  • Instructions   (255 tokens)     │
-│  • Goal           (1500 tokens)    │
-│  • Memory         (55 tokens)      │
-│  • Retrieval      (550 tokens)     │
-│  • Tool Outputs   (855 tokens)     │
-│                                    │
-│  → Enforces hard budgets           │
-│  → Prioritizes & truncates content │
-└───────────┬────────────────────────┘
-            v
-┌────────────────────────┐
-│ LLM (Ollama)           │
-│ llama3.2:1b            │
-└───────────┬────────────┘
-            v
-┌────────────────────────┐
-│ Final Answer           │
-│ + Token Breakdown      │
-└────────────────────────┘
-
-The system follows a standard RAG pipeline with an explicit **context assembly stage** that enforces token budgets.
-
-### System Flow
-```mermaid
-graph TD
-    A[User Question] -->|Query| B[Vector Database ChromaDB]
-    B -->|16 policy docs<br/>80+ chunks| C[Retriever k=6]
-    C -->|Top 6 chunks<br/>~750 tokens| D[Context Assembler]
-    
-    D --> D1[Instructions: 95/255 ✓]
-    D --> D2[Goal: 19/1500 ✓]
-    D --> D3[Memory: 5/55 ✓]
-    D --> D4[Retrieval: 550/550 ⚠️]
-    D --> D5[Tool Outputs: 5/855 ✓]
-    
-    D1 --> E[Assembled Context<br/>624 tokens]
-    D2 --> E
-    D3 --> E
-    D4 --> E
-    D5 --> E
-    
-    E --> F[LLM Llama 3.2:1b]
-    F --> G[Answer to User]
-    
-    style D4 fill:#ffcccc
-    style D fill:#e1f5ff
-    style F fill:#d4edda
-```
-
-### Budget Overflow Logic
-```mermaid
-flowchart LR
-    A[Retrieved 6 Chunks<br/>Total: 750 tokens] --> B{Budget: 550}
-    
-    B -->|Chunk 1: 120| C1[Add ✓<br/>Total: 120]
-    C1 -->|Chunk 2: 130| C2[Add ✓<br/>Total: 250]
-    C2 -->|Chunk 3: 140| C3[Add ✓<br/>Total: 390]
-    C3 -->|Chunk 4: 110| C4[Add ✓<br/>Total: 500]
-    C4 -->|Chunk 5: 125| C5{625 > 550?}
-    
-    C5 -->|YES| D[Drop ✗]
-    D --> E[Final: 4 kept<br/>2 dropped<br/>500 tokens]
-    
-    style C5 fill:#ffcccc
-    style E fill:#ccffcc
-```
-
-### Context Assembly Diagrams
-
 The diagrams below illustrate how the system **explicitly assembles the LLM context window** from multiple sources under fixed token budgets.
 
 ![Context Assembly Diagram](diagrams/context_diagram.png)
@@ -367,102 +281,81 @@ Ensure the following are installed on your system:
 
 ### Required Ollama Models
 
-The system depends on two Ollama models:
-
-- **Embedding model:** `mxbai-embed-large`
-- **LLM:** `llama3.2:1b`
-
-Pull both models before running the application:
-
+The system depends on two Ollama models. Pull both before running:
 ```bash
 ollama pull llama3.2:1b
 ollama pull mxbai-embed-large
 ollama run llama3.2:1b
+```
 
+---
 
-###Project Setup
+### Project Setup
 
-####Create and activate a virtual environment
+#### Create and activate a virtual environment
 
 From the project root directory:
-
-'''bash
+```bash
 python -m venv venv
-
+```
 
 Activate the environment:
 
-Windows
-'''bash
+**Windows:**
+```bash
 venv\Scripts\activate
+```
 
-
-macOS / Linux
-'''bash
+**macOS / Linux:**
+```bash
 source venv/bin/activate
+```
 
-
-####Install Python dependencies
+#### Install Python dependencies
 
 With the virtual environment activated:
-
+```bash
 pip install -r requirements.txt
-
+```
 
 This installs all required dependencies, including:
+- Streamlit
+- LangChain
+- Chroma
+- Ollama bindings
+- Token counting utilities
 
-Streamlit
+---
 
-LangChain
-
-Chroma
-
-Ollama bindings
-
-Token counting utilities
-
-
-####Running the Application
+### Running the Application
 
 When the application starts:
+- Policy files are embedded automatically (if no database exists)
+- The Chroma vector store is created on first run
+- Subsequent runs reuse the persisted database
 
-Policy files are embedded automatically (if no database exists)
-
-The Chroma vector store is created on first run
-
-Subsequent runs reuse the persisted database
-
-
-####Launch the Streamlit UI
+#### Launch the Streamlit UI
 
 With Ollama running and the virtual environment active:
-'''bash
+```bash
 streamlit run streamlit_app.py
-
+```
 
 This launches a local web interface where you can:
+- Ask questions against the policy corpus
+- Observe vector retrieval behavior
+- View token budget breakdowns
+- See retrieval truncation when budgets are exceeded
+- Inspect the assembled context (optional)
 
-Ask questions against the policy corpus
-
-Observe vector retrieval behavior
-
-View token budget breakdowns
-
-See retrieval truncation when budgets are exceeded
-
-Inspect the assembled context (optional)
-
-
-
+---
 
 ## Screenshots
 
-The screenshots below demonstrate the system’s behavior under different levels of retrieval pressure.
+The screenshots below demonstrate the system's behavior under different levels of retrieval pressure.
 
 ### Simple Query (Retrieval Truncation Still Occurs)
 ![Simple Query Screenshot](screenshots/simple_question.png)
-
-
 
 ### Complex Query (High Retrieval Pressure)
 ![Complex Query Screenshot](screenshots/complex_question.png)
